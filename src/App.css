@@ -1,38 +1,100 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: rgb(65, 73, 82);
+}
+.container {
+  width: 100vw;
+  height: 100vh;
+  letter-spacing: 2px;
+}
+
+.qrContainer {
+  width: 700px;
+  margin: 0px  auto;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.qrContainer h1 {
+  font-size: 40px;
+  padding-top: 20px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.inputTextDiv {
+  padding: 20px 0px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.inputTextDiv input {
+  padding: 8px 10px;
+  font-size: 16px; 
+  outline: none;
+  width: 500px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  letter-spacing: 1px;
+}
+
+.inputTextDiv button {
+  width: 150px;
+  padding: 9px 20px;
+  font-size: 16px; 
+  margin-left: 10px;
+  border-radius: 5px;
+  background-color: rgb(12, 147, 250);
+  border: none;
+  letter-spacing: 1px;
+}
+.colorSizeDiv{
+  display: flex;
+  justify-content: center;
+}
+.colorDiv, .sizeDiv{
+  padding: 0px 10px;
+  display: flex;
+}
+.colorDiv label, .sizeDiv label{
+  padding: 0px 10px;
+  color: white;
+}
+
+.qrDiv {
+  width: 400px;
+  height: 400px;
+  margin: 80px auto;
+}
+
+@media (max-width: 710px){
+  .qrContainer {
+    width: 300px;
+    margin: 0px auto;
+    text-align: center;
   }
-  to {
-    transform: rotate(360deg);
+  .inputTextDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
   }
+  .inputTextDiv input {
+    width: 100%; 
+  }
+  .colorSizeDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  .qrDiv {
+    width: 300px;
+    height: 300px;
+    margin: 50px auto;
+  
+  }
+  
 }
